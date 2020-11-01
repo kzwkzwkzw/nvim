@@ -30,7 +30,7 @@ Download and install to default path.
 
 ### Install ripgrep
 
-Download and place to '$KZW_BIN_DIR\ripgrep'  
+Download and place to '$KZW_BIN_DIR/ripgrep'  
 [ripgrep release][ripgrep]  
 
 ### Clone this repository
