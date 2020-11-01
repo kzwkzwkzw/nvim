@@ -18,7 +18,7 @@ Add environment variable 'KZW_BIN_DIR' and set your binary path.
 Download and install to default path.  
 [git for windows][git]  
 
-### Install git for windows
+### Install neovim
 
 Download and place where you like.  
 [neovim release][nvim]  
