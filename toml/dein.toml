@@ -1,0 +1,41 @@
+# colorscheme
+[[plugins]]
+repo = 'overcache/NeoSolarized'
+
+[[plugins]]
+repo = 'junegunn/seoul256.vim'
+
+# status line
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+
+# key bind
+[[plugins]]
+repo = 'houtsnip/vim-emacscommandline'
+
+# git
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'mhinz/vim-signify'
+
+# explore
+[[plugins]]
+repo = 'Shougo/defx.nvim'
+
+# search
+[[plugins]]
+repo = 'junegunn/fzf'
+hook_post_update = '''
+    let cmd = 'bash ./install --all --xdg'
+    let g:dein#plugin.build = cmd
+'''
+
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+
+# lsp
+[[plugins]]
+repo = 'neovim/nvim-lspconfig'
+
