@@ -23,6 +23,16 @@ Download and install to default path.
 Download and place where you like.  
 [neovim release][nvim]  
 
+### Install python3
+
+Download and install to default path with add to PATH.  
+[python3][py]
+
+Use cmd.
+```
+pip install neovim
+```
+
 ### Install LLVM (clangd)
 
 Download and install to default path.  
@@ -44,5 +54,6 @@ git clone https://github.com/kzwkzwkzw/nvim.git
 
   [git]: https://gitforwindows.org/
   [nvim]: https://github.com/neovim/neovim/releases
+  [py]: https://www.python.org/
   [llvm]: https://github.com/llvm/llvm-project/releases
   [ripgrep]: https://github.com/BurntSushi/ripgrep/releases
