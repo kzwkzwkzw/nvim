@@ -39,7 +39,7 @@ Use git bash.
 ```
 mkdir -p ~/.config
 cd ~/.config
-git clone https://github.com/kzwkzwkzw/nvim.git ./
+git clone https://github.com/kzwkzwkzw/nvim.git
 ```
 
   [git]: https://gitforwindows.org/
