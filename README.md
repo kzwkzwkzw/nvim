@@ -30,7 +30,7 @@ Download and install to default path with add to PATH.
 
 Use cmd.
 ```
-pip install neovim
+pip install pynvim
 ```
 
 ### Install LLVM (clangd)
