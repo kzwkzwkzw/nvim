@@ -1,6 +1,6 @@
 if dein#is_sourced('lightline.vim')
     let g:lightline = {
-        \ 'colorscheme': 'seoul256-light',
+        \ 'colorscheme': 'seoul256',
         \ 'mode_map': {'c': 'NORMAL'},
         \ 'active': {
         \   'left': [

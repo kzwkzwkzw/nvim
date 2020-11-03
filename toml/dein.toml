@@ -39,3 +39,9 @@ repo = 'junegunn/fzf.vim'
 [[plugins]]
 repo = 'neovim/nvim-lspconfig'
 
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+
+[[plugins]]
+repo = 'Shougo/deoplete-lsp'
+
