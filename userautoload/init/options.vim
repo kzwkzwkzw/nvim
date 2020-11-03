@@ -46,6 +46,8 @@ set switchbuf=useopen
 
 " search
 set nowrapscan
+set smartcase
+set ignorecase
 
 " grep
 if executable('rg')

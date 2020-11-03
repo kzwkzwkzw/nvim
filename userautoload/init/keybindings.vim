@@ -15,7 +15,7 @@ noremap k gk
 noremap gj j
 noremap gk k
 noremap <c-l> $
-noremap <c-h> ^
+noremap <c-h> 0
 noremap <c-j> %
 
 " window
