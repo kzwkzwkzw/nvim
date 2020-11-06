@@ -7,7 +7,9 @@ if dein#is_sourced('defx.nvim')
 
     function! s:defx_my_settings() abort
         noremap <silent><buffer><expr> <CR>
-        \ defx#do_action('drop')
+        \ defx#is_directory() ?
+        \ defx#do_action('multi', ['drop', 'change_vim_cwd']) :
+        \ defx#do_action('multi', ['drop', 'quit'])
         noremap <silent><buffer><expr> l
         \ defx#is_directory() ?
         \ defx#do_action('open_tree') :
@@ -42,8 +44,10 @@ if dein#is_sourced('defx.nvim')
 
         noremap <silent><buffer><expr> t
         \ defx#do_action('open','tabnew')
-        noremap <silent><buffer><expr> E
+        noremap <silent><buffer><expr> v
         \ defx#do_action('drop', 'vsplit')
+        noremap <silent><buffer><expr> s
+        \ defx#do_action('drop', 'split')
         noremap <silent><buffer><expr> yy
         \ defx#do_action('yank_path')
         noremap <silent><buffer><expr> ;
@@ -57,6 +61,7 @@ if dein#is_sourced('defx.nvim')
 
         noremap <silent><buffer><expr> q
         \ defx#do_action('quit')
+
     endfunction
 
     call defx#custom#option('_', {

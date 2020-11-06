@@ -63,10 +63,11 @@ vnoremap gs :s///g<left><left><left>
 " grep
 noremap gre :<c-u>gre 
 noremap grw :<c-u>gre <c-r><c-w> <bar> cw<cr>
-noremap grc :<c-u>gre <c-r><c-w> -tc<left><left><left><left>
+noremap grc :<c-u>gre <c-r><c-w> -tc -w<left><left><left><left><left><left><left>
 
 " quick fix
 noremap <silent> ql :<c-u>cw<cr>
+noremap <silent> qq :<c-u>ccl<cr>
 noremap <silent> qn :<c-u>cn<cr>
 noremap <silent> qp :<c-u>cp<cr>
 
