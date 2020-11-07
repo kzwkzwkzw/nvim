@@ -26,14 +26,7 @@ repo = 'Shougo/defx.nvim'
 
 # search
 [[plugins]]
-repo = 'junegunn/fzf'
-hook_post_update = '''
-    let cmd = 'bash ./install --all --xdg'
-    let g:dein#plugin.build = cmd
-'''
-
-[[plugins]]
-repo = 'junegunn/fzf.vim'
+repo = 'Shougo/denite.nvim'
 
 # lsp
 [[plugins]]

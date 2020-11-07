@@ -1,10 +1,6 @@
 if dein#is_sourced('defx.nvim')
-    noremap [defx] <nop>
-    nmap <leader>d [defx]
-    noremap <silent> [defx] :<c-u>Defx<cr>
-
+    " key bindings for defx
     autocmd FileType defx call s:defx_my_settings()
-
     function! s:defx_my_settings() abort
         noremap <silent><buffer><expr> <CR>
         \ defx#is_directory() ?
@@ -61,7 +57,6 @@ if dein#is_sourced('defx.nvim')
 
         noremap <silent><buffer><expr> q
         \ defx#do_action('quit')
-
     endfunction
 
     call defx#custom#option('_', {
@@ -73,4 +68,9 @@ if dein#is_sourced('defx.nvim')
         \ 'toggle': 1,
         \ 'resume': 1,
         \ })
+
+    " key bindings to active defx
+    noremap [defx] <nop>
+    nmap <leader>e [defx]
+    noremap <silent> [defx] :<c-u>Defx<cr>
 endif
