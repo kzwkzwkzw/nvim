@@ -5,6 +5,9 @@ repo = 'overcache/NeoSolarized'
 [[plugins]]
 repo = 'junegunn/seoul256.vim'
 
+[[plugins]]
+repo = 'NLKNguyen/papercolor-theme'
+
 # status line
 [[plugins]]
 repo = 'itchyny/lightline.vim'
@@ -37,4 +40,8 @@ repo = 'Shougo/deoplete.nvim'
 
 [[plugins]]
 repo = 'Shougo/deoplete-lsp'
+
+# coding
+[[plugins]]
+repo = 'jiangmiao/auto-pairs'
 

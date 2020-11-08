@@ -5,5 +5,5 @@ if dein#is_sourced('seoul256.vim')
     " seoul256 (light):
     "   Range:   252 (darkest) ~ 256 (lightest)
     "   Default: 253
-    let g:seoul256_background = 235
+    let g:seoul256_background = 234
 endif

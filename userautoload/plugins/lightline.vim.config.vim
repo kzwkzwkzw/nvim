@@ -1,6 +1,6 @@
 if dein#is_sourced('lightline.vim')
     let g:lightline = {
-        \ 'colorscheme': 'seoul256',
+        \ 'colorscheme': 'PaperColor',
         \ 'mode_map': {'c': 'NORMAL'},
         \ 'active': {
         \   'left': [
@@ -71,7 +71,7 @@ if dein#is_sourced('lightline.vim')
     endfunction
 
     function! MyMode()
-        return winwidth('.') > 60 ? lightline#mode() : ''
+        return winwidth('.') > 70 ? lightline#mode() : ''
     endfunction
 
     function! MyGitGutter()
