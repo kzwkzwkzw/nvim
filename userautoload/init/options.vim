@@ -40,9 +40,21 @@ set cinoptions+=:0,g0
 
 " file
 set hidden
+set backup
+let s:backup_dir = expand('~/.cache/nvim/backup')
+if !isdirectory(s:backup_dir)
+    call mkdir(s:backup_dir, 'p')
+endif
+execute 'set backupdir=' . s:backup_dir
+set undofile
+let s:undo_dir = expand('~/.cache/nvim/undo')
+if !isdirectory(s:undo_dir)
+    call mkdir(s:undo_dir, 'p')
+endif
+execute 'set undodir=' . s:undo_dir
 
 " buffer
-set switchbuf=useopen
+set switchbuf=useopen,usetab,vsplit
 
 " search
 set nowrapscan
