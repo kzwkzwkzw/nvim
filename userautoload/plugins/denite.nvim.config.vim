@@ -42,11 +42,11 @@ if dein#is_sourced('denite.nvim')
     endif
 
     " key bindings to active denite
-    noremap [denite] <nop>
-    nmap <leader>d [denite]
-    noremap <silent> [denite]f :<c-u>Denite file/rec<cr>
-    noremap <silent> [denite]b :<c-u>Denite buffer<cr>
-    noremap <silent> [denite]a :<c-u>Denite -start-filter file/rec buffer<cr>
-    noremap <silent> [denite]g :<c-u>Denite -winheight=`winheight(0)/2` -buffer-name=mygrep grep<cr>
-    noremap <silent> [denite]r :<c-u>Denite -resume -winheight=`winheight(0)/2` -buffer-name=mygrep<cr>
+    noremap [searcher] <nop>
+    nmap <leader>d [searcher]
+    noremap <silent> [searcher]f :<c-u>Denite file/rec<cr>
+    noremap <silent> [searcher]b :<c-u>Denite buffer<cr>
+    noremap <silent> [searcher]a :<c-u>Denite -start-filter file/rec buffer<cr>
+    noremap <silent> [searcher]g :<c-u>Denite -winheight=`winheight(0)/2` -buffer-name=mygrep grep<cr>
+    noremap <silent> [searcher]r :<c-u>Denite -resume -winheight=`winheight(0)/2` -buffer-name=mygrep<cr>
 endif

@@ -70,7 +70,7 @@ if dein#is_sourced('defx.nvim')
         \ })
 
     " key bindings to active defx
-    noremap [defx] <nop>
-    nmap <leader>e [defx]
-    noremap <silent> [defx] :<c-u>Defx<cr>
+    noremap [explore] <nop>
+    nmap <leader>e [explore]
+    noremap <silent> [explore] :<c-u>Defx<cr>
 endif
