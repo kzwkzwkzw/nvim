@@ -41,7 +41,3 @@ repo = 'Shougo/deoplete.nvim'
 [[plugins]]
 repo = 'Shougo/deoplete-lsp'
 
-# coding
-[[plugins]]
-repo = 'jiangmiao/auto-pairs'
-
