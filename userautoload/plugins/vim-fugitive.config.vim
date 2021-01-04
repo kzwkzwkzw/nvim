@@ -5,5 +5,6 @@ if dein#is_sourced('vim-fugitive')
     noremap <silent> [git]b :<c-u>Gblame<cr>
     noremap <silent> [git]f :<c-u>Gfetch<cr>
     noremap <silent> [git]d :<c-u>Gvdiff<cr>
+    noremap <silent> [git]l :<c-u>Glog<cr>
     noremap <silent> [git]c :<c-u>Gcd<cr>
 endif

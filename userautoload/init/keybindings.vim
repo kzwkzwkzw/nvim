@@ -66,10 +66,10 @@ noremap grw :<c-u>gre <c-r><c-w> <bar> cw<cr>
 noremap grc :<c-u>gre <c-r><c-w> -tc -w<left><left><left><left><left><left><left>
 
 " quick fix
-noremap <silent> ql :<c-u>cw<cr>
-noremap <silent> qq :<c-u>ccl<cr>
-noremap <silent> qn :<c-u>cn<cr>
-noremap <silent> qp :<c-u>cp<cr>
+noremap <silent> <c-q>w :<c-u>cw<cr>
+noremap <silent> <c-q>c :<c-u>ccl<cr>
+noremap <silent> <c-q>n :<c-u>cn<cr>
+noremap <silent> <c-q>p :<c-u>cp<cr>
 
 " path
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'

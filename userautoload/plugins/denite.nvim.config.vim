@@ -9,6 +9,8 @@ if dein#is_sourced('denite.nvim')
         \ denite#do_map('do_action', 'preview')
         nnoremap <silent><buffer><expr> <CR>
         \ denite#do_map('do_action')
+        nnoremap <silent><buffer><expr> t
+        \ denite#do_map('do_action', 'tabopen')
         nnoremap <silent><buffer><expr> s
         \ denite#do_map('do_action', 'split')
         nnoremap <silent><buffer><expr> v
@@ -22,6 +24,11 @@ if dein#is_sourced('denite.nvim')
         nnoremap <silent><buffer><expr> q
         \ denite#do_map('quit')
     endfunction
+
+    " Change denite default options
+    call denite#custom#option('default', {
+        \ 'split': 'floating',
+        \ })
 
     " Change file/rec command
     if executable('rg')
@@ -46,7 +53,8 @@ if dein#is_sourced('denite.nvim')
     nmap <leader>s [searcher]
     noremap <silent> [searcher]f :<c-u>Denite -start-filter file/rec<cr>
     noremap <silent> [searcher]b :<c-u>Denite buffer<cr>
+    noremap <silent> [searcher]c :<c-u>Denite colorscheme<cr>
     noremap <silent> [searcher]a :<c-u>Denite -start-filter file/rec buffer<cr>
-    noremap <silent> [searcher]g :<c-u>Denite -winheight=`winheight(0)/2` -buffer-name=mygrep grep<cr>
+    noremap <silent> [searcher]g :<c-u>Denite -split=floating -buffer-name=mygrep grep<cr>
     noremap <silent> [searcher]r :<c-u>Denite -resume -winheight=`winheight(0)/2` -buffer-name=mygrep<cr>
 endif

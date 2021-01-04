@@ -9,8 +9,8 @@ if dein#is_sourced('defx.nvim')
         noremap <silent><buffer><expr> l
         \ defx#is_directory() ?
         \ defx#do_action('open_tree') :
-        \ defx#do_action('drop')
-        noremap <silent><buffer><expr> h
+        \ 'l'
+        noremap <silent><buffer><expr> ..
         \ defx#do_action('cd', ['..'])
         noremap <silent><buffer><expr> j
         \ line('.') == line('$') ? 'gg' : 'j'
@@ -40,10 +40,6 @@ if dein#is_sourced('defx.nvim')
 
         noremap <silent><buffer><expr> t
         \ defx#do_action('open','tabnew')
-        noremap <silent><buffer><expr> v
-        \ defx#do_action('drop', 'vsplit')
-        noremap <silent><buffer><expr> s
-        \ defx#do_action('drop', 'split')
         noremap <silent><buffer><expr> yy
         \ defx#do_action('yank_path')
         noremap <silent><buffer><expr> ;
@@ -59,10 +55,9 @@ if dein#is_sourced('defx.nvim')
         \ defx#do_action('quit')
     endfunction
 
+    " window settings
     call defx#custom#option('_', {
-        \ 'winwidth': 39,
-        \ 'split': 'vertical',
-        \ 'direction': 'topleft',
+        \ 'split': 'floating',
         \ 'show_ignored_files': 1,
         \ 'buffer_name': 'exlorer',
         \ 'toggle': 1,

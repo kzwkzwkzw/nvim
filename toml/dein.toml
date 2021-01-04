@@ -33,11 +33,6 @@ repo = 'Shougo/denite.nvim'
 
 # lsp
 [[plugins]]
-repo = 'neovim/nvim-lspconfig'
-
-[[plugins]]
-repo = 'Shougo/deoplete.nvim'
-
-[[plugins]]
-repo = 'Shougo/deoplete-lsp'
+repo = 'neoclide/coc.nvim'
+merged = '0'
 
