@@ -43,6 +43,11 @@ Download and install to default path.
 Download and place to '$KZW_BIN_DIR/ripgrep'  
 [ripgrep release][ripgrep]  
 
+### Install Node.js
+
+Download and place to default path.  
+[node.js][nodejs]  
+
 ### Clone this repository
 
 Use git bash.  
@@ -52,8 +57,16 @@ cd ~/.config
 git clone https://github.com/kzwkzwkzw/nvim.git
 ```
 
+### CocInstall
+
+Run nvim and execute CocInstall
+```
+CocInstall coc-clangd
+```
+
   [git]: https://gitforwindows.org/
   [nvim]: https://github.com/neovim/neovim/releases
   [py]: https://www.python.org/
   [llvm]: https://github.com/llvm/llvm-project/releases
   [ripgrep]: https://github.com/BurntSushi/ripgrep/releases
+  [nodejs]: https://nodejs.org/ja/
