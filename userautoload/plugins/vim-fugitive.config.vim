@@ -1,4 +1,4 @@
-if dein#is_sourced('vim-fugitive')
+if IsPlugged('vim-fugitive')
     noremap [git] <nop>
     nmap <leader>g [git]
     noremap <silent> [git]s :<c-u>tab sp<cr>:<c-u>Gstatus<cr>:only<cr>

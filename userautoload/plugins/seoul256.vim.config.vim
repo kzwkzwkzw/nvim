@@ -1,4 +1,4 @@
-if dein#is_sourced('seoul256.vim')
+if IsPlugged('seoul256.vim')
     " seoul256 (dark):
     "   Range:   233 (darkest) ~ 239 (lightest)
     "   Default: 237

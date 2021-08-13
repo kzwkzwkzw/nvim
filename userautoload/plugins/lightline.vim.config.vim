@@ -1,4 +1,4 @@
-if dein#is_sourced('lightline.vim')
+if IsPlugged('lightline.vim')
     let g:lightline = {
         \ 'colorscheme': 'PaperColor',
         \ 'mode_map': {'c': 'NORMAL'},

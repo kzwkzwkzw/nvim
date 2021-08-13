@@ -1,3 +1,3 @@
-if dein#is_sourced('vim-emacscommandline')
+if IsPlugged('vim-emacscommandline')
     let g:EmacsCommandLineSearchCommandLineDisable = 1
 endif

@@ -1,4 +1,4 @@
-if dein#is_sourced('defx.nvim')
+if IsPlugged('defx.nvim')
     " key bindings for defx
     autocmd FileType defx call s:defx_my_settings()
     function! s:defx_my_settings() abort

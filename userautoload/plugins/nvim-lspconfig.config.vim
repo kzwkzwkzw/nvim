@@ -1,4 +1,4 @@
-if dein#is_sourced('nvim-lspconfig')
+if IsPlugged('nvim-lspconfig')
     lua require'nvim_lsp'.clangd.setup{}
 
     noremap [lsp] <nop>

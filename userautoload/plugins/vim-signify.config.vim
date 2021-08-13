@@ -1,2 +1,2 @@
-if dein#is_sourced('vim-signify')
+if IsPlugged('vim-signify')
 endif

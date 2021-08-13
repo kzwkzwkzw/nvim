@@ -1,4 +1,4 @@
-if dein#is_sourced('denite.nvim')
+if IsPlugged('denite.nvim')
     " key bindings for denite
     autocmd FileType denite call s:denite_my_settings()
     function! s:denite_my_settings() abort
