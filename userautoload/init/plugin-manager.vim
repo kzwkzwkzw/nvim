@@ -24,6 +24,8 @@ Plug 'mhinz/vim-signify'
 Plug 'f-person/git-blame.nvim'
 " explore
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'kristijanhusak/defx-icons'
+Plug 'ryanoasis/vim-devicons'
 " search
 Plug 'Shougo/denite.nvim'
 " lsp

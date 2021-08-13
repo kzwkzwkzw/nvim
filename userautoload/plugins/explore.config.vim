@@ -1,3 +1,6 @@
+noremap [xplore] <nop>
+nmap <leader>e [explore]
+
 if IsPlugged('defx.nvim')
     " key bindings for defx
     autocmd FileType defx call s:defx_my_settings()
@@ -10,6 +13,12 @@ if IsPlugged('defx.nvim')
         \ defx#is_directory() ?
         \ defx#do_action('open_tree') :
         \ 'l'
+        noremap <silent><buffer><expr> h
+        \ defx#do_action('close_tree')
+        noremap <silent><buffer><expr> o
+        \ defx#is_directory() ?
+        \ defx#do_action('open_tree', 'recursive:10') :
+        \ defx#do_action('multi', ['drop', 'quit'])
         noremap <silent><buffer><expr> ..
         \ defx#do_action('cd', ['..'])
         noremap <silent><buffer><expr> j
@@ -57,15 +66,18 @@ if IsPlugged('defx.nvim')
 
     " window settings
     call defx#custom#option('_', {
+        \ 'wincol': 0,
+        \ 'winrow': &lines / 3,
+        \ 'winwidth': &columns,
+        \ 'winheight': &lines,
         \ 'split': 'floating',
         \ 'show_ignored_files': 1,
         \ 'buffer_name': 'exlorer',
         \ 'toggle': 1,
         \ 'resume': 1,
+        \ 'columns': 'indent:icons:mark:filename:type:size:time',
         \ })
 
     " key bindings to active defx
-    noremap [xplore] <nop>
-    nmap <leader>e [explore]
     noremap <silent> [explore] :<c-u>Defx<cr>
 endif

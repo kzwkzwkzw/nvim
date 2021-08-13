@@ -1,4 +1,4 @@
-Guifont! Ricty Diminished for Powerline:h12
+Guifont! Cica:h12
 GuiTabline 0
 GuiPopupmenu 0
 
