@@ -21,8 +21,9 @@ Plug 'houtsnip/vim-emacscommandline'
 " git
 Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
+Plug 'f-person/git-blame.nvim'
 " explore
-Plug 'Shougo/defx.nvim'
+Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 " search
 Plug 'Shougo/denite.nvim'
 " lsp
