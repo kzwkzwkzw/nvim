@@ -8,3 +8,6 @@ if IsPlugged('vim-fugitive')
     noremap <silent> [git]l :<c-u>Glog<cr>
     noremap <silent> [git]c :<c-u>Gcd<cr>
 endif
+
+if IsPlugged('vim-signify')
+endif
