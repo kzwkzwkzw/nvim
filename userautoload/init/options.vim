@@ -54,7 +54,7 @@ endif
 execute 'set undodir=' . s:undo_dir
 
 " buffer
-set switchbuf=useopen,usetab,vsplit
+set switchbuf=uselast
 
 " search
 set nowrapscan
