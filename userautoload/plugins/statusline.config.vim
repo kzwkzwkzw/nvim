@@ -10,37 +10,45 @@ if IsPlugged('lightline.vim')
         \   'right': [
         \     ['lineinfo', 'syntastic'],
         \     ['percent'],
-        \     ['charcode', 'fileformat', 'fileencoding', 'filetype'],
+        \     ['charcode', 'fileencoding'],
         \   ]
         \ },
         \ 'component_function': {
         \   'mode': 'MyMode',
         \   'cocstatus': 'coc#status',
-        \   'gitbranch': 'FugitiveHead',
+        \   'gitbranch': 'MyFugitive',
         \   'charcode': 'MyCharCode',
-        \   'fileformat': 'MyFileformat',
-        \   'filetype': 'MyFiletype',
         \   'fileencoding': 'MyFileencoding',
         \   'syntastic': 'SyntasticStatuslineFlag',
         \ },
-        \ 'separator': {'left': '⮀', 'right': '⮂'},
-        \ 'subseparator': {'left': '⮁', 'right': '⮃'}
+        \ 'separator': {'left': '', 'right': ' '},
+        \ 'subseparator': {'left': '', 'right': ' '}
         \ }
 
     function! MyMode()
-        return winwidth('.') > 70 ? lightline#mode() : ''
+        return winwidth('.') > 70 ? '  '.lightline#mode() : ''
     endfunction
 
-    function! MyFileformat()
-        return winwidth('.') > 70 ? &fileformat : ''
-    endfunction
-
-    function! MyFiletype()
-        return winwidth('.') > 70 ? (strlen(&filetype) ? &filetype : 'no ft') : ''
+    function! MyFugitive()
+		if exists("*fugitive#head")
+			let _ = fugitive#head()
+			return strlen(_) ? ' '._ : ''
+		endif
+		return ''
+        return winwidth('.') > 70 ? ' '.lightline#mode() : ''
     endfunction
 
     function! MyFileencoding()
-        return winwidth('.') > 70 ? (strlen(&fenc) ? &fenc : &enc) : ''
+		if &fileformat == 'dos'
+			let _ff = ' '
+		elseif &fileformat == 'unix'
+			let _ff = ' '
+		elseif &fileformat == 'mac'
+			let _ff = ' '
+		else
+			let _ff = &fileformat
+		endif
+        return winwidth('.') > 70 ? (strlen(&fenc) ? &fenc.' '._ff : &enc.' '._ff) : ''
     endfunction
 
     " https://github.com/Lokaltog/vim-powerline/blob/develop/autoload/Powerline/Functions.vim
@@ -71,3 +79,4 @@ if IsPlugged('lightline.vim')
         return "'". char ."' ". nr
     endfunction
 endif
+

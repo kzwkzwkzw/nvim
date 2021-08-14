@@ -14,7 +14,9 @@ call plug#begin(s:mng_plug_dir)
 Plug 'overcache/NeoSolarized'
 Plug 'junegunn/seoul256.vim'
 Plug 'NLKNguyen/papercolor-theme'
-"  status line
+" symbol
+Plug 'ryanoasis/vim-devicons'
+" status line
 Plug 'itchyny/lightline.vim'
 " key bind
 Plug 'houtsnip/vim-emacscommandline'
@@ -25,7 +27,6 @@ Plug 'f-person/git-blame.nvim'
 " explore
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'kristijanhusak/defx-icons'
-Plug 'ryanoasis/vim-devicons'
 " search
 Plug 'Shougo/denite.nvim'
 " lsp
