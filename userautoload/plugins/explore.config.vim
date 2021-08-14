@@ -78,6 +78,8 @@ if IsPlugged('defx.nvim')
         \ 'columns': 'indent:icons:mark:filename:type:size:time',
         \ })
 
+    let g:defx_icons_column_length = 2
+
     " key bindings to active defx
     noremap <silent> [explore] :<c-u>Defx<cr>
 endif
