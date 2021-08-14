@@ -1,4 +1,4 @@
-noremap [xplore] <nop>
+noremap [explore] <nop>
 nmap <leader>e [explore]
 
 if IsPlugged('defx.nvim')
@@ -43,14 +43,14 @@ if IsPlugged('defx.nvim')
         noremap <silent><buffer><expr> !
         \ defx#do_action('execute_command')
         noremap <silent><buffer><expr> x
-        \ defx#do_action('execute_system')
+        \ defx#do_action('multi', ['execute_system', 'quit'])
         noremap <silent><buffer><expr> .
         \ defx#do_action('toggle_ignored_files')
 
         noremap <silent><buffer><expr> t
         \ defx#do_action('open','tabnew')
         noremap <silent><buffer><expr> yy
-        \ defx#do_action('yank_path')
+        \ defx#do_action('multi', ['yank_path', 'quit'])
         noremap <silent><buffer><expr> ;
         \ defx#do_action('repeat')
         noremap <silent><buffer><expr> ~
@@ -78,7 +78,7 @@ if IsPlugged('defx.nvim')
         \ 'columns': 'indent:icons:mark:filename:type:size:time',
         \ })
 
-    let g:defx_icons_column_length = 2
+    let g:defx_icons_colum_length = 2
 
     " key bindings to active defx
     noremap <silent> [explore] :<c-u>Defx<cr>
