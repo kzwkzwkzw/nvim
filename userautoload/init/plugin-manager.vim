@@ -27,6 +27,7 @@ Plug 'f-person/git-blame.nvim'
 " explore
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'kristijanhusak/defx-icons'
+Plug 'kristijanhusak/defx-git'
 " search
 Plug 'Shougo/denite.nvim'
 " lsp
