@@ -87,7 +87,7 @@ if IsPlugged('defx.nvim')
 			\ 'buffer_name': 'exlorer',
 			\ 'toggle': 1,
 			\ 'resume': 1,
-			\ 'columns': 'icons:indent:git:mark:filename:type:size:time',
+			\ 'columns': 'git:indent:icons:mark:filename:type:size:time',
 			\ })
 
 	let g:defx_icons_colum_length = 2
